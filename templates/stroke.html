@@ -1,0 +1,129 @@
+<!-- This is GUI for Heart disease Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-image: url('static/images/image3.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li><a href="/diabetes">Diabetes</a></li>
+      <li><a href="/stroke">Stroke</a></li>
+    </ul>
+  </div>
+
+
+
+ <div class="login">
+
+    <!-- Get input for predict the  Diabetes -->
+    <center>
+         <br>
+            <br>
+               <br>
+                  <br>
+    <form action="{{ url_for('predictstroke')}}"method="Post">
+
+          <br>
+            <br>
+              <br>
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                        <br>
+                          <br>
+                           <br>
+                            <br>
+                             <br>
+                              <br>
+
+
+
+        <h1>Enter the value of Stroke features >>></h1>
+
+    	<input type="text" name="age" placeholder="age" required="required" />
+        <input type="text" name="hypertension" placeholder="hypertension" required="required" />
+		<input type="text" name="disease" placeholder="disease" required="required" />
+        <input type="text" name="glucose" placeholder="glucose" required="required" />
+            <input type="text" name="bmi" placeholder="bmi" required="required" />
+
+
+
+		<br>
+    	<input type="text" name="gender_male" placeholder="gender_male" required="required" />
+        <input type="text" name="gender_other" placeholder="gender_other" required="required" />
+		<input type="text" name="married_yes" placeholder="married_yes" required="required" />
+        <input type="text" name=" work_type_Never_worked" placeholder=" work_type_Never_worked" required="required" />
+            <input type="text" name="work_type_Private" placeholder="work_type_Private" required="required" />
+
+
+
+		<br>
+    	<input type="text" name="work_type_Self_employed" placeholder=" work_type_Self_employed" required="required" />
+        <input type="text" name="work_type_children" placeholder="work_type_children" required="required" />
+		<input type="text" name="Residence_type_Urban" placeholder="Residence_type_Urban" required="required" />
+        <input type="text" name="smoking_status_formerly_smoked" placeholder="smoking_status_formerly_smoked" required="required" />
+        <input type="text" name="smoking_status_never_smoked" placeholder="smoking_status_never_smoked" required="required" />
+
+
+
+      <br>
+      <input type="text" name="smoking_status_smokes" placeholder="smoking_status_smokes" required="required" />
+      <br>
+
+
+
+
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="https://github.com/Rahul77-123/Rahul77-123.git" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Stroke</strong></button></a>
+        </div>
+
+    </form>
+    </center>
+
+   <!-- Show predicted output using ML model -->
+   <div>
+       <center>
+   <h1>{{ prediction_text2 }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
